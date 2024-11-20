@@ -48,3 +48,14 @@ corrplot(cor_matrix, method = "color", order = "hclust",
          tl.cex = 0.5, # Adjust text size (smaller value for smaller text)
          col = colorRampPalette(c("blue", "white", "red"))(200),
          title = "Correlation Matrix with Clustering")
+
+corrplot(correlation_matrix, 
+         method = "color",          # Use a color gradient
+         col = colorRampPalette(c("blue", "white", "red"))(200), 
+         tl.col = "black",          # Text label color
+         tl.srt = 45,               # Text label rotation
+         order = "hclust",          # Apply hierarchical clustering
+         hclust.method = "complete", # Clustering method (can be "ward.D", "average", etc.)
+         addrect = 3,               # Draw rectangles around clusters (optional)
+         title = "Correlation Matrix with Clustering",
+         mar = c(0, 0, 1, 0))       # Adjust margins for the plot
